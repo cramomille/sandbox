@@ -1,0 +1,96 @@
+body {
+    font-family: 'Courier New', monospace;
+    background: #1e1e1e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background: #252526;
+    border: 1px solid #3e3e42;
+    border-radius: 4px;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.editor-wrapper {
+    display: flex;
+    background: #1e1e1e;
+    position: relative;
+}
+
+.line-numbers {
+    background: #1e1e1e;
+    color: #858585;
+    padding: 10px 8px;
+    text-align: right;
+    user-select: none;
+    border-right: 1px solid #3e3e42;
+    font-size: 14px;
+    line-height: 20px;
+    min-width: 40px;
+    white-space: pre;
+    overflow: hidden;
+    height: 300px;
+}
+
+textarea {
+    flex: 1;
+    background: #1e1e1e;
+    color: #d4d4d4;
+    border: none;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 20px;
+    resize: none;
+    outline: none;
+    height: 300px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    overflow-y: auto;
+}
+
+textarea::placeholder { color: #858585; }
+
+.controls {
+    background: #252526;
+    padding: 8px;
+    border-top: 1px solid #3e3e42;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #5a5a5a;
+    color: #d4d4d4;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+button:hover { background: #6e6e6e; }
+
+.stop { background: #ffd854; color: #1e1e1e; }
+
+.style-buttons { display: flex; gap: 5px; }
+
+.style-btn { width: auto; padding: 0 10px; font-size: 14px; }
+
+.style-btn.active { background: #ffd854; color: #1e1e1e; }

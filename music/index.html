@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Texte vers Sons Polyphonique</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="editor-wrapper">
+        <div class="line-numbers" id="lineNumbers"></div>
+        <textarea id="textInput" placeholder="écris ton texte...">120 c d e f g a b c
+180     c d e f g a b
+100 g f e d c     c d</textarea>
+    </div>
+    <div class="controls">
+        <div class="main-buttons">
+            <button id="playBtn">▶</button>
+            <button id="restartBtn">⟳</button>
+        </div>
+        <div class="style-buttons">
+            <button class="style-btn active" data-style="sawtooth">Électro</button>
+            <button class="style-btn" data-style="sine">Symphonique</button>
+            <button class="style-btn" data-style="square">Chiptune</button>
+            <button class="style-btn" data-style="triangle">Doux</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+<script src="sound.js"></script>
+<script src="editor.js"></script>
+</body>
+</html>
